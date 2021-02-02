@@ -24,8 +24,9 @@ for (let customer of customers) {
     customerAddress.innerText = `${customer.location.street.number} ${customer.location.street.name}`
     customerdiv.appendChild(customerAddress)
     
-    // const customerAddress2 = document.createElement("div")
-    // customerAddress2.innerText = `${customer.location.city}`, ${customer.location.}
+    const customerAddress2 = document.createElement("div")
+    customerAddress2.innerText = `${customer.location.city} ${nameToAbbr(customer.location.state)}`
+    customerdiv.appendChild(customerAddress2)
 
 }
 
