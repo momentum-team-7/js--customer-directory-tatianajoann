@@ -1,42 +1,46 @@
 const container = document.querySelector(".customers")
-console.log(container)
-console.log(customers) 
 let customer = customers[0]
-console.log(customer.name.title)
-console.log(customer.picture.thumbnail)
-// // create a dom element
-// const customerElement = document.createElement("h2")
-// customerElement.innerText = "customer.title"
-// //insert it into the dom
-// container.appendChild(customerElement)
-// //create a dom element for menu image
 
-
-// const customerName = document.createElement("h4")
-// customerName.innerText="name: ${customer.name.first} ${customer.name.last}"
-// container.appendChild(customerName)
+// window.addEventListener("load", () => renderMenu())
 
 
 for (let customer of customers) {
+    const customerdiv = document.createElement("div")
+
     const customerImg = document.createElement("img")
     customerImg.src = customer.picture.thumbnail
-    //insert it into the dom
-    container.appendChild(customerImg)
-    
-}
+    customerdiv.appendChild(customerImg)
+    container.appendChild(customerdiv)
 
-for (let customer of customers) {
     const customerElement = document.createElement("h2")
     customerElement.innerText =`${customer.name.first} ${customer.name.last}`
-  //insert it into the dom
-    container.appendChild(customerElement)
-  }
+    customerdiv.appendChild(customerElement)
 
-for (let customer of customers) {
     const customerEmail = document.createElement("div")
     customerEmail.innerText = `${customer.email}`
-    container.appendChild(customerEmail)
+    customerdiv.appendChild(customerEmail)
+
+    const customerAddress = document.createElement("div")
+    customerAddress.innerText = `${customer.location.street.number} ${customer.location.street.name}`
+    customerdiv.appendChild(customerAddress)
+    
+    // const customerAddress2 = document.createElement("div")
+    // customerAddress2.innerText = `${customer.location.city}`, ${customer.location.}
+
 }
+
+// location: {
+//       street: {
+//         number: 4339,
+//         name: 'Green Rd'
+//       },
+//       city: 'Great Falls',
+//       state: 'Alabama',
+//       country: 'United States',
+//       postcode: 66032,
+//       coordinates: {
+//         latitude: '11.2090',
+//         longitude: '139.7209'
 
 
 
