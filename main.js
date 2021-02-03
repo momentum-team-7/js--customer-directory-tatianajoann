@@ -9,7 +9,7 @@ for (let customer of customers) {
     const customerdiv = document.createElement("div")
 
     const customerImg = document.createElement("img")
-    customerImg.src = customer.picture.thumbnail
+    customerImg.src = customer.picture.large
     customerdiv.appendChild(customerImg)
     container.appendChild(customerdiv)
 
@@ -18,6 +18,7 @@ for (let customer of customers) {
     customerdiv.appendChild(customerElement)
 
     const customerEmail = document.createElement("div")
+    customerEmail.classList.add("customer-email")
     customerEmail.innerText = `${customer.email}`
     customerdiv.appendChild(customerEmail)
 
