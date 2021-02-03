@@ -1,3 +1,4 @@
+
 const container = document.querySelector(".customers")
 let customer = customers[0]
 
@@ -28,20 +29,17 @@ for (let customer of customers) {
     customerAddress2.innerText = `${customer.location.city} ${nameToAbbr(customer.location.state)}`
     customerdiv.appendChild(customerAddress2)
 
+    const customerDob = document.createElement("div")
+    customerDob.innerText = `DOB: ${moment(customer.dob.date).format("MMM Do YYYY")}`
+    customerdiv.appendChild(customerDob)
+
+    const customerSince = document.createElement("div")
+    customerSince.innerText = `Customer since: ${moment(customer.registered.date).format("MMM Do YYYY")}`
+    customerdiv.appendChild(customerSince)
+
 }
 
-// location: {
-//       street: {
-//         number: 4339,
-//         name: 'Green Rd'
-//       },
-//       city: 'Great Falls',
-//       state: 'Alabama',
-//       country: 'United States',
-//       postcode: 66032,
-//       coordinates: {
-//         latitude: '11.2090',
-//         longitude: '139.7209'
+
 
 
 

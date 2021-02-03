@@ -1,11 +1,14 @@
+h1 {font-family: "Arial";}
 
+h2 {margin: 5px;}
 
 .customers {display: flex;
 flex-wrap: wrap;
-justify-content: space-evenly;
+justify-content: space-between;
+font-family: "Arial";
 }
 
-
+img {border-radius: 50px;}
 
 .customerdiv {margin: 30px;
     padding: 30px;
