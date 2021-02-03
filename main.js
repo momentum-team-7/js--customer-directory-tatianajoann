@@ -31,11 +31,11 @@ for (let customer of customers) {
     customerdiv.appendChild(customerAddress2)
 
     const customerDob = document.createElement("div")
-    customerDob.innerText = `DOB: ${moment(customer.dob.date).format("MMM Do YYYY")}`
+    customerDob.innerText = `DOB: ${moment(customer.dob.date).format("MMM Do, YYYY")}`
     customerdiv.appendChild(customerDob)
 
     const customerSince = document.createElement("div")
-    customerSince.innerText = `Customer since: ${moment(customer.registered.date).format("MMM Do YYYY")}`
+    customerSince.innerText = `Customer since: ${moment(customer.registered.date).format("MMM Do, YYYY")}`
     customerdiv.appendChild(customerSince)
 
 }
